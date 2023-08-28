@@ -36,7 +36,7 @@ const Frame1 = ({pageTitle, btnTitle}) =>{
                             <label style={{
                                 fontSize:"1.5em",
                                 color:"#CAEDFF",
-                                fontFamily:"Roboto, sans-serif"
+                                fontFamily:"Roboto, sans-serif",
                             }}>{pageTitle}</label><br /><br />
                             {(btnTitle) ? <Button variant="contained" color="secondary" sx={{
                                 textTransform:"capitalize",
