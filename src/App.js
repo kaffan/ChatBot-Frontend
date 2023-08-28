@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import EnterPage from "./EnterPage/EnterPage";
+import Page2 from "./ChatBotPage/Page2";
+import ExitPage from "./ExitPage/ExitPage";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+         <Routes>
+            <Route path="/" element={<EnterPage />}>
+              <Route path="/Chatbot" element={<Page2 />}></Route>
+              <Route path="/Exit" element={<ExitPage />}></Route>
+            </Route>
+         </Routes>
+      </BrowserRouter>
     </div>
   );
 }
